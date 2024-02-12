@@ -1,3 +1,4 @@
+import csv
 # Below is a dictionary that contains information about real estate space for
 # a doctor's office. Using the dictionary, create a csv file that has details
 # for each space represented as rows. Name your file 'retail_space.csv.
@@ -47,3 +48,14 @@ datastore = { "medical":[
 
       ]
 }
+
+outfile = open('retail_space.csv', 'w')
+
+csv_file = csv.writer(outfile)
+
+outfile.write(f'room-number,use,sq-ft,price\n')
+
+for d in datastore["medical"]:
+    outfile.write(f'{d["room-number"]},{d["use"]},{d["sq-ft"]},{d["price"]}\n')
+
+outfile.close
