@@ -37,5 +37,5 @@ for school in list_of_schools:
 for school in list_of_schools:
     if school["NCAA"]["NAIA conference number football (IC2020)"] in conference_schools:
         if type(school["Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)"]) == int:
-          if school["Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)"] > 50000:
+            if school["Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)"] > 50000:
                 print(f'\nUniversity: {school["instnm"]}\nTotal price for in-state student living off campus: ${school["Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)"]:,.2f}\n')
