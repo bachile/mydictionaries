@@ -51,8 +51,6 @@ datastore = { "medical":[
 
 outfile = open('retail_space.csv', 'w')
 
-csv_file = csv.writer(outfile)
-
 outfile.write(f'room-number,use,sq-ft,price\n')
 
 for d in datastore["medical"]:
